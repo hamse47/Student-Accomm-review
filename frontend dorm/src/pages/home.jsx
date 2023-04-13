@@ -31,26 +31,34 @@ const Home = () => {
 
   return (
     <div>
-      <div className="h-[600px] w-[100%] flex flex-col items-center justify-center">
-        <div className="max-w-[800px] w-full">
-          <p className="text-xl text-center text-white mb-2">
+      <div className="relative h-[500px] w-[100%] flex flex-col items-center bg-fixed justify-center">
+        <img
+          src={"/University-accom-pic.png"}
+          alt="University Accommodation"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute max-w-[800px] w-full z-10">
+          <p className="inset-0 text-xl text-center decoration-red-400 underline decoration-2 hover:uppercase text-zinc-100 font-bold lg:text-3xl">
             Your dream student housing, made easy.
           </p>
           <select
             onChange={handleSelect}
-            className=" w-[80%]  mx-auto my-auto block  p-4 text-gray-900 border border-gray-300 rounded-lg bg-white sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="w-[80%] mx-auto my-auto block p-4 text-gray-900 border border-gray-300 rounded-lg bg-white sm:text-md focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-red-500"
           >
             <option value="" hidden></option>
             {school.map(({ name, _id }) => (
-              <option value={_id}>{name}</option>
+              <option key={_id} value={_id}>
+                {name}
+              </option>
             ))}
           </select>
         </div>
       </div>
+
       <div className="w-full text-right">
         <button
           onClick={handleAddSchool}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md m-3"
+          className="bg-red-400 text-white px-4 py-2 rounded-md m-3"
         >
           Add New School
         </button>
@@ -65,3 +73,20 @@ const Home = () => {
 };
 
 export default Home;
+
+{
+  /* <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px]">
+      <Image
+        src={"/University-accom-pic.png"}
+        objectFit="cover"
+        layout="fill"
+      />
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute text-center top-1/2 w-full z-10">
+        <a class="sm:text-2xl text-base underline decoration-red-400 underline decoration-2 hover:uppercase text-slate-200 font-bold lg:text-3xl overflow-auto">
+          Your dream student housing, made easy.
+        </a>
+      </div>
+    </div>
+  ); */
+}

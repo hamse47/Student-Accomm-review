@@ -82,7 +82,7 @@ const AddReview = () => {
       <div className="bg-blue-300 h-[400px] w-[100%] flex flex-col items-center justify-center">
         <div className="max-w-[800px] w-full">
           <p className="text-center font-bold text-xl text-white ">
-            Write a review for dorm
+            Write an Accommodtion review
           </p>
         </div>
       </div>

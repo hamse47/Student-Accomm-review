@@ -22,13 +22,13 @@ const DormList = () => {
     if (token) {
       navigate(`/add-review/${school}/new-dorm`);
     } else {
-      alert("you must be loggein for writing review");
+      alert("you must log in to write a writing review");
       navigate(`/login`);
     }
   };
   return (
     <div>
-      <div className="bg-blue-500 h-[400px] w-[100%] flex flex-col items-center justify-center">
+      <div className="bg-blue-100 h-[400px] w-[100%] flex flex-col items-center justify-center">
         <div className="max-w-[800px] w-full">
           <p className="text-center font-bold text-3xl text-white ">
             {state?.name}
@@ -39,7 +39,7 @@ const DormList = () => {
         <div className="w-full text-right">
           <button
             onClick={addDorm}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md m-3"
+            className="bg-red-400 text-white px-4 py-2 rounded-md m-3"
           >
             Add New Dorm
           </button>
