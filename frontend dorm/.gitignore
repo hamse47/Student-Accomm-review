@@ -3,3 +3,6 @@ frontend dorm/node_modules
 
 new-backend/.env 
 frontend dorm/.env
+
+ssh-key.pub
+ssh-key
