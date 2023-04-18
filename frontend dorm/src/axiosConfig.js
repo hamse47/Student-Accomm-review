@@ -15,5 +15,6 @@ axios.interceptors.response.use(
       localStorage.removeItem("token");
       window.location.href = "/";
     }
+    return Promise.reject(error);
   }
 );

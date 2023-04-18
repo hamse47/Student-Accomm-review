@@ -12,7 +12,7 @@ const Login = () => {
     axios
       .post("/api/user/login", data)
       .then((res) => {
-        alert("login sucess");
+        alert("login success");
         localStorage.setItem("token", res.data.token);
         window.location.href = "/";
       })
@@ -26,16 +26,16 @@ const Login = () => {
         onSubmit={handleSubmit}
         className="shadow-md flex flex-col p-10 py-18 border-black rounded-md "
       >
-        <p className="text-2xl text-center my-4">Login</p>
+        <p className="text-2xl text-center my-4">Sign-In</p>
         <input
-          placeholder="enter username"
+          placeholder="Enter username"
           className="m-2 w-[300px] border p-2 rounded-md"
           name="username"
           value={data.username}
           onChange={handleChange}
         />
         <input
-          placeholder="enter password"
+          placeholder="Enter password"
           className="m-2 w-[300px] border p-2 rounded-md"
           name="password"
           type="password"
@@ -43,10 +43,10 @@ const Login = () => {
           onChange={handleChange}
         />
         <button className="bg-blue-400 py-2 text-white px-6 mx-auto mt-10 rounded-md w-[max-content]">
-          Login
+          Sign-In
         </button>
         <p className="w-[300px] mt-5 text-center text-sm">
-          Don't have account ?{" "}
+          Don't have an account?{" "}
           <Link to="/register" className="text-blue-400 font-bold">
             Register
           </Link>

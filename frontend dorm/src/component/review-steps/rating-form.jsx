@@ -31,24 +31,23 @@ const RatingForm = ({ data, setData, setActive }) => {
     return [
       {
         title: "Rate the room",
-        description:
-          "Consider the room's size, cleanliness, and availablilty of natural light.",
+        description: " Keep in mind the rooms's space sizes, hygiene.",
         name: "roomRating",
       },
       {
         title: "Rate the building",
-        description: "Consider the building's amenities, cleanliness, and age.",
+        description:
+          "Keep in mind the building's features, appearance, and age.",
         name: "buildingRating",
       },
       {
         title: "Rate the bathroom",
-        description:
-          "Consider the bathroom's cleanliness, modernness, and features.",
+        description: "Keep in mind the bathroom's amenities and cleanliness",
         name: "bathroomRating",
       },
       {
         title: "Rate the location",
-        description: "Consider the location's convenience and safety.",
+        description: "Keep in mind the location's convenience and safety.",
         name: "locationRating",
       },
     ];
@@ -63,7 +62,7 @@ const RatingForm = ({ data, setData, setActive }) => {
         <button
           onClick={handleSubmit}
           disabled={getRating() ? false : true}
-          className={`bg-blue-400 text-white px-10 py-2 mt-10 mx-auto rounded-md ${
+          className={`bg-red-400 text-white px-10 py-2 mt-10 mx-auto rounded-md ${
             getRating() ? "bg-blue-400" : "bg-blue-200"
           }`}
         >

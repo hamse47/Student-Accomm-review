@@ -11,18 +11,20 @@ const Home = () => {
   const { token } = useContext(AuthContext);
 
   useEffect(() => {
-    axios.get("/api/dorm/school/").then((res) => setSchool(res.data || []));
+    axios
+      .get("/api/accommodation/school/")
+      .then((res) => setSchool(res.data || []));
   }, []);
 
   const handleSelect = (e) => {
     let id = e.target.value;
     let name = school.filter((obj) => obj._id === id)[0].name;
-    navigate(`/dorm/${id}`, { state: { name } });
+    navigate(`/accommodation/${id}`, { state: { name } });
   };
 
   const handleAddSchool = () => {
     if (token) {
-      navigate(`/add-review/new-school/new-dorm`);
+      navigate(`/add-review/new-school/new-accommodation`);
     } else {
       alert("you must be logged in to writing a review");
       navigate(`/login`);
@@ -38,8 +40,8 @@ const Home = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute max-w-[800px] w-full z-10">
-          <p className="inset-0 text-xl text-center decoration-red-400 underline decoration-2 hover:uppercase text-zinc-100 font-bold lg:text-3xl">
-            Your dream student housing, made easy.
+          <p className="inset-0 text-xl text-center decoration-red-400 underline decoration-2 hover:uppercase text-neutral-100 decoration-black font-bold lg:text-3xl">
+            Your dream student housing, made easy!!
           </p>
           <select
             onChange={handleSelect}
@@ -73,20 +75,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px]">
-      <Image
-        src={"/University-accom-pic.png"}
-        objectFit="cover"
-        layout="fill"
-      />
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="absolute text-center top-1/2 w-full z-10">
-        <a class="sm:text-2xl text-base underline decoration-red-400 underline decoration-2 hover:uppercase text-slate-200 font-bold lg:text-3xl overflow-auto">
-          Your dream student housing, made easy.
-        </a>
-      </div>
-    </div>
-  ); */
-}

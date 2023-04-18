@@ -46,7 +46,7 @@ module.exports.create_review = async (req, res) => {
   } else {
     return res
       .status(400)
-      .json({ err: "school id or schoool name required !!" });
+      .json({ err: "school id or school name required !!" });
   }
   if (dorm_id || dorm_name) {
     if (dorm_id) {
@@ -171,25 +171,21 @@ module.exports.get_dorm_detail = async (req, res) => {
   if (!dorm[0]) {
     return res.status(400).json({ msg: "dorm not found" });
   }
-  dorm[0].total_freshman = await ReviewModel.find({
+  dorm[0].total_first_year = await ReviewModel.find({
     dormId: id,
-    classYear: /Freshman/i,
+    classYear: /First Year/i,
   }).count();
-  dorm[0].total_sophomore = await ReviewModel.find({
+  dorm[0].total_second_year = await ReviewModel.find({
     dormId: id,
-    classYear: /Sophomore/i,
+    classYear: /Second Year/i,
   }).count();
-  dorm[0].total_junior = await ReviewModel.find({
+  dorm[0].total_third_year = await ReviewModel.find({
     dormId: id,
-    classYear: /Junior/i,
+    classYear: /Third Year/i,
   }).count();
-  dorm[0].total_senior = await ReviewModel.find({
+  dorm[0].total_fourth_year = await ReviewModel.find({
     dormId: id,
-    classYear: /Senior/i,
-  }).count();
-  dorm[0].total_graduate = await ReviewModel.find({
-    dormId: id,
-    classYear: /Graduate Student/i,
+    classYear: /Fourth Year/i,
   }).count();
   let review = await ReviewModel.find({ dormId: id });
   return res.json({ dorm, review });
