@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import AuthContext from "../context";
 
-const DormDetail = () => {
+const AccommodationDetail = () => {
   const { dormid, school } = useParams();
   const [data, setData] = useState({ dorm: {}, reviews: null });
   const { token } = useContext(AuthContext);
@@ -20,15 +20,15 @@ const DormDetail = () => {
     avg_room_rating,
     name,
     review_count,
-    total_freshman,
-    total_junior,
-    total_senior,
-    total_sophomore,
+    total_first_year,
+    total_second_year,
+    total_third_year,
+    total_fourth_year,
   } = data.dorm;
 
   useEffect(() => {
     axios
-      .get(`/api/dorm/detail/${dormid}`)
+      .get(`/api/accommodation/detail/${dormid}`)
       .then((res) => {
         setData({ dorm: res.data.dorm[0], reviews: res.data.review });
       })
@@ -44,7 +44,7 @@ const DormDetail = () => {
     if (token) {
       navigate(`/add-review/${school}/${dormid}`);
     } else {
-      alert("you must be loggein for writing review");
+      alert(`You must be signed in to a write a review for ${name}`);
       navigate(`/login`);
     }
   };
@@ -87,7 +87,7 @@ const DormDetail = () => {
     <div>
       <div className="bg-blue-300 h-[400px] w-[100%] flex flex-col items-center justify-center">
         <div className="max-w-[800px] w-full">
-          <p className="text-center font-bold text-2xl text-white ">{name}</p>
+          <p className="text-center font-bold text-2xl text-black ">{name}</p>
         </div>
       </div>
       <div className="w-full text-right">
@@ -95,7 +95,7 @@ const DormDetail = () => {
           onClick={handleWrite}
           className="bg-blue-500 text-white px-4 py-2 rounded-md m-3"
         >
-          write a review
+          Write a review
         </button>
       </div>
       <div className="w-full container min-h-screen flex mx-auto mt-10 ">
@@ -122,10 +122,10 @@ const DormDetail = () => {
               rating={parseInt(avg_bathroom_rating)}
             />
             <p className="text-xl mt-10">When They Lived Here</p>
-            <ReviewRange title={"Freshman"} value={total_freshman} />
-            <ReviewRange title={"Sophomore"} value={total_sophomore} />
-            <ReviewRange title={"Junior"} value={total_junior} />
-            <ReviewRange title={"Senior"} value={total_senior} />
+            <ReviewRange title={"First Year"} value={total_first_year} />
+            <ReviewRange title={"Second Year"} value={total_second_year} />
+            <ReviewRange title={"Third Year"} value={total_third_year} />
+            <ReviewRange title={"Fourth Year"} value={total_fourth_year} />
           </div>
         </div>
         <div className="w-[70%] p-3">
@@ -138,4 +138,4 @@ const DormDetail = () => {
   );
 };
 
-export default DormDetail;
+export default AccommodationDetail;

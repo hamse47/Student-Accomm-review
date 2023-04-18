@@ -16,7 +16,7 @@ const AddReview = () => {
 
   const checkSchool = () => {
     axios
-      .get("/api/dorm/valid/school/" + school)
+      .get("/api/accommodation/valid/school/" + school)
       .then((res) => {
         if (res.data._id !== data.school_id) {
           setData((prev) => ({
@@ -28,13 +28,13 @@ const AddReview = () => {
         }
       })
       .catch(() => {
-        alert("invalid dorm id");
+        alert("invalid accommodation id");
       });
   };
 
   const checkDorm = () => {
     axios
-      .get("/api/dorm/valid/dorm/" + dorm)
+      .get("/api/accommodation/valid/dorm/" + dorm)
       .then((res) => {
         if (data.dorm_id !== res.data._id)
           setData((prev) => ({
@@ -60,7 +60,7 @@ const AddReview = () => {
         <AddSchoolDorm data={data} setData={setData} setActive={setActive} />,
         ...steps,
       ];
-    } else if (dorm === "new-dorm") {
+    } else if (dorm === "new-accommodation") {
       steps = [
         <AddDorm data={data} setData={setData} setActive={setActive} />,
         ...steps,
@@ -82,7 +82,7 @@ const AddReview = () => {
       <div className="bg-blue-300 h-[400px] w-[100%] flex flex-col items-center justify-center">
         <div className="max-w-[800px] w-full">
           <p className="text-center font-bold text-xl text-white ">
-            Write a review for dorm
+            Write an Accommodation review
           </p>
         </div>
       </div>
@@ -91,7 +91,7 @@ const AddReview = () => {
           {[0, 1, 2, 3].map((num) => (
             <li
               class={`text-3xl flex ${
-                active - (allStep.length - 4) >= num ? "text-blue-600" : ""
+                active - (allStep.length - 4) >= num ? "text-red-400" : ""
               }  items-center ${
                 num !== 3 &&
                 "md:w-full  dark:text-blue-500 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700"

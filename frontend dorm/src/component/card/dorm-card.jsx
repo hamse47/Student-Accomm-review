@@ -18,7 +18,7 @@ const Star = ({ rating }) => {
   );
 };
 
-const DormCard = ({
+const AccommodationCard = ({
   name,
   review_count,
   avg_bathroom_rating,
@@ -28,7 +28,7 @@ const DormCard = ({
   school,
   _id,
 }) => (
-  <Link to={`/dorm/${school}/${_id}`}>
+  <Link to={`/accommodation/${school}/${_id}`}>
     <div class="w-full mx-2 my-2  max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <img class="p-8 rounded-t-lg" src="/dorm.jpg" alt="" />
       <div class="px-5 pb-5">
@@ -52,4 +52,4 @@ const DormCard = ({
   </Link>
 );
 
-export default DormCard;
+export default AccommodationCard;

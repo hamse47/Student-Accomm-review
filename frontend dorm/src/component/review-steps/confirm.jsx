@@ -68,7 +68,7 @@ const Confirmation = ({ data, setData, setActive }) => {
       }
     });
     axios
-      .post("/api/dorm", form, {
+      .post("/api/accommodation", form, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -109,8 +109,8 @@ const Confirmation = ({ data, setData, setActive }) => {
             </div>
           </div>
           <div className="col-span-3 ">
-            <Label name={"Class year"} data={data.class_year} />
-            <Label name={"Room type"} data={data.room_type} />
+            <Label name={"Class year"} data={data.classYear} />
+            <Label name={"Room type"} data={data.roomType} />
             <PreviewImg name="Photos" type="img" data={data.photos} />
           </div>
         </div>
@@ -128,7 +128,7 @@ const Confirmation = ({ data, setData, setActive }) => {
         </button>
         <button
           onClick={handleSubmit}
-          className="bg-blue-400 text-white px-10 py-2 mt-10 mx-auto rounded-md"
+          className="bg-yellow-400 text-white px-10 py-2 mt-10 mx-auto rounded-md"
         >
           Submit
         </button>

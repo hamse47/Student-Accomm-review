@@ -9,6 +9,7 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import "./axiosConfig";
 import AuthContext from "./context";
+import "./App.css";
 
 function App() {
   const [token, setToken] = useState(null);
@@ -26,8 +27,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/dorm/:school" element={<DormList />} />
-          <Route path="/dorm/:school/:dormid" element={<DormDetail />} />
+          <Route path="/accommodation/:school" element={<DormList />} />
+          <Route
+            path="/accommodation/:school/:dormid"
+            element={<DormDetail />}
+          />
           <Route path="/add-review/:school/:dorm" element={<AddReview />} />
         </Routes>
       </Router>

@@ -55,8 +55,8 @@ const CommentPhoto = ({ data, setData, setActive }) => {
     <div className="container">
       <label className="mt-5 text-xl font-bold block">Write a comment</label>
       <p className="text">
-        How was your experience living here? Write a helpful comment about the
-        pros, cons and what to expect when living at {data.dorm_name}.
+        How did you find living here? Describe the advantages, disadvantages,
+        and what to expect when residing at {data.dorm_name}.
       </p>
       <textarea
         value={data.comment}
@@ -66,9 +66,8 @@ const CommentPhoto = ({ data, setData, setActive }) => {
       />
       <label className="mt-7 text-xl font-bold block">Upload Photos</label>
       <p className="text">
-        ou can attach up to 5 photos to your review. Please only attach clear,
-        helpful photos of the exterior and interior Oo---. All photos are
-        screened by moderators.
+        A maximum of 5 images to your review. Only clear, useful pictures of the
+        outside and inside of the Accommodation
       </p>
       <div className="container flex my-5">
         {preview_img.map((file, index) => (
@@ -110,7 +109,7 @@ const CommentPhoto = ({ data, setData, setActive }) => {
           onClick={handleSubmit}
           disabled={!isValid()}
           className={`${
-            isValid() ? "bg-blue-400" : "bg-blue-200"
+            isValid() ? "bg-red-400" : "bg-blue-200"
           } text-white px-10 py-2 mt-10 mx-auto rounded-md`}
         >
           Next

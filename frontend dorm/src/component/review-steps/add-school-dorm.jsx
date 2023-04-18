@@ -1,4 +1,4 @@
-const AddSchoolDorm = ({ data, setData, setActive }) => {
+const AddSchoolAccommodation = ({ data, setData, setActive }) => {
   const handleChange = (e) => {
     setData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -32,7 +32,7 @@ const AddSchoolDorm = ({ data, setData, setActive }) => {
             data.school_name === "" ||
             !data.school_name
           }
-          className={`bg-blue-400 text-white px-10 py-2 mt-10 mx-auto rounded-md ${
+          className={`bg-red-400 text-white px-10 py-2 mt-10 mx-auto rounded-md ${
             data.dorm_name === "" ||
             !data.dorm_name ||
             data.school_name === "" ||
@@ -48,4 +48,4 @@ const AddSchoolDorm = ({ data, setData, setActive }) => {
   );
 };
 
-export default AddSchoolDorm;
+export default AddSchoolAccommodation;

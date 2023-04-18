@@ -1,0 +1,5 @@
+new-backend/node_modules
+frontend dorm/node_modules
+
+new-backend/.env 
+frontend dorm/.env

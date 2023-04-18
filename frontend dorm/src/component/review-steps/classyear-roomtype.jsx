@@ -1,10 +1,9 @@
 const ClassYearRoomType = ({ data, setData, setActive }) => {
   const class_year_data = [
-    "Freshman",
-    "Sophomore",
-    "Junior",
-    "Senior",
-    "Graduate Student",
+    "First Year",
+    "Second Year",
+    "Third Year",
+    "Fourth Year",
   ];
   const room_type = ["Single", "Double", "Triple", "Quad", "Suite", "Other"];
 
@@ -110,7 +109,7 @@ const ClassYearRoomType = ({ data, setData, setActive }) => {
           onClick={handleSubmit}
           disabled={!isValid()}
           className={`${
-            isValid() ? "bg-blue-400" : "bg-blue-200"
+            isValid() ? "bg-red-400" : "bg-blue-200"
           } text-white px-10 py-2 mt-10 mx-auto rounded-md`}
         >
           Next

@@ -11,7 +11,7 @@ const adminAuth = async (req, res, next) => {
         req.user = user;
         next();
       } else {
-        return res.status(401).json({ err: "unauthorized acess" });
+        return res.status(401).json({ err: "unauthorized access" });
       }
     } catch (err) {
       return res.status(401).json({ err: "invalid token" });

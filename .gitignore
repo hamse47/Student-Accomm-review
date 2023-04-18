@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 new-backend/node_module
 frontend dorm/node_module
 
 new-backend/.env 
 frontend dorm/.env 
+=======
+new-backend/node_modules
+frontend dorm/node_modules
+
+new-backend/.env 
+frontend dorm/.env 
+
+>>>>>>> 77d5c27d11df5b3e10d40f3d381eac90966380b3

@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import AuthContext from "../context";
 
-const DormList = () => {
+const AccommodationList = () => {
   const { school } = useParams();
   const { state } = useLocation();
   const [data, setData] = useState([]);
@@ -12,25 +12,25 @@ const DormList = () => {
   const { token } = useContext(AuthContext);
   useEffect(() => {
     axios
-      .get(`/api/dorm/school/${school}`)
+      .get(`/api/accommodation/school/${school}`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   console.log();
-  const addDorm = () => {
+  const addAccommodation = () => {
     if (token) {
-      navigate(`/add-review/${school}/new-dorm`);
+      navigate(`/add-review/${school}/new-accommodation`);
     } else {
-      alert("you must be loggein for writing review");
+      alert("you must log in to write a writing review");
       navigate(`/login`);
     }
   };
   return (
     <div>
-      <div className="bg-blue-500 h-[400px] w-[100%] flex flex-col items-center justify-center">
+      <div className="bg-blue-300 h-[400px] w-[100%] flex flex-col items-center justify-center">
         <div className="max-w-[800px] w-full">
-          <p className="text-center font-bold text-3xl text-white ">
+          <p className="text-center font-bold text-3xl text-black ">
             {state?.name}
           </p>
         </div>
@@ -38,10 +38,10 @@ const DormList = () => {
       <div className="w-full container flex flex-wrap py-2">
         <div className="w-full text-right">
           <button
-            onClick={addDorm}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md m-3"
+            onClick={addAccommodation}
+            className="bg-red-400 text-white px-4 py-2 rounded-md m-3"
           >
-            Add New Dorm
+            Add New Accommodation
           </button>
         </div>
         {data.map((data) => (
@@ -52,4 +52,4 @@ const DormList = () => {
   );
 };
 
-export default DormList;
+export default AccommodationList;
