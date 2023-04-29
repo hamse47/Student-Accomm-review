@@ -87,19 +87,19 @@ const AddReview = () => {
         </div>
       </div>
       <div className="container my-10 max-w-[700px] mx-auto">
-        <ol class="flex items-center w-full  font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
+        <ol class="flex items-center w-full  font-medium text-center text-red-500 dark:text-gray-400 sm:text-base">
           {[0, 1, 2, 3].map((num) => (
             <li
               class={`text-3xl flex ${
-                active - (allStep.length - 4) >= num ? "text-red-400" : ""
+                active - (allStep.length - 4) >= num ? "text-blue-400" : ""
               }  items-center ${
                 num !== 3 &&
-                "md:w-full  dark:text-blue-500 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700"
+                "md:w-full  dark:text-blue-500 sm:after:content-[''] after:w-full after:h-1 after:border-b after:text-green-500 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700"
               } `}
             >
               <span class="flex items-center justify-end">
                 {active - (allStep.length - 4) >= num && (
-                  <i class="mr-2 text-lg fa-regular fa-circle-check"></i>
+                  <i class="mr-2 text-lg fa-regular fa-circle-check text-green-500"></i>
                 )}
                 {num + 1}
               </span>

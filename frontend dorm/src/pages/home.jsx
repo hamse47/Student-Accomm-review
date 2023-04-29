@@ -41,7 +41,7 @@ const Home = () => {
         />
         <div className="absolute max-w-[800px] w-full z-10">
           <p className="inset-0 text-xl text-center decoration-red-400 underline decoration-2 hover:uppercase text-neutral-100 decoration-black font-bold lg:text-3xl">
-            Your dream student housing, made easy!!
+            Your dream student housing, made easy
           </p>
           <select
             onChange={handleSelect}
