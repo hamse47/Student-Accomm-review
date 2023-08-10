@@ -14,6 +14,12 @@ Student-Accomm-Review is a React web application designed to assist students in 
 - **User-Friendly Interface:** Intuitive UI for seamless navigation and interaction.
 - **Responsive Design:** Ensures a consistent experience across devices.
 
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- Node.js installed (Download and install it from https://nodejs.org/)
+- MongoDB installed (Download and install it from https://www.mongodb.com/)
+
 ## Installation
 
 1. Clone the repository:
