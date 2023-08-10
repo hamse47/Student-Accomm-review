@@ -60,7 +60,57 @@ Open your browser and visit http://localhost:3000 to use the app.
 
 ## Project Screenshots 📸
 
-Insert captivating screenshots or images showcasing the brilliance of your application's user interface and features.
+## Project Screenshots
+
+# How to Use the Review App 📝
+
+Follow these steps to effectively navigate and utilize the Student-Accomm-Review app:
+
+### Home Page
+Access the home page with a search bar and a drop-down to see all schools.
+
+![Home Page](https://github.com/hamse47/Student-Accomm-review/assets/78507974/15fd242b-d662-4538-9dda-10ff4a65bd3a)
+
+### Add New School
+Click the "Add New School" button and navigate to the review page.
+
+![Add New School](https://github.com/hamse47/Student-Accomm-review/assets/78507974/5b9804ae-ab91-4828-92c5-c326a73cd539)
+
+### Review - Star Ratings
+Rate Room, Building, Bathroom, and Location on a scale of 1-5.
+
+![Review - Star Ratings](https://github.com/hamse47/Student-Accomm-review/assets/78507974/78303998-0409-404d-b75d-a3a618dc435b)
+
+### Review - Comment and Image Upload
+Write a comment and upload an image.
+
+![Review - Comment and Image Upload](https://github.com/hamse47/Student-Accomm-review/assets/78507974/8c2d3134-f49b-4c1a-9e27-85f5b971c3fa)
+
+### Review - Stay Information
+Input the stay year and room type.
+
+![Review - Stay Information](https://github.com/hamse47/Student-Accomm-review/assets/78507974/8661d886-9b56-4209-9443-586c6ed13022)
+
+### Review - Confirmation and Submission
+Review the information entered and submit the review.
+
+![Review - Confirmation and Submission](https://github.com/hamse47/Student-Accomm-review/assets/78507974/95362a01-5826-4307-92a1-e1f22a8cb42f)
+
+### View Submitted Review
+View the submitted review on the school's page.
+
+![View Submitted Review](https://github.com/hamse47/Student-Accomm-review/assets/78507974/93da5bab-7065-4278-9acd-f6dc2febbba7)
+
+### View Accommodations List
+Click on the submitted review on the school page to view a list of accommodations.
+
+![View Accommodations List](https://github.com/hamse47/Student-Accomm-review/assets/78507974/1fb43d1e-da47-4f0d-b6c7-edef3c15fcff)
+
+### Write a Review for the Accommodation
+Click the "Write a Review" for the accommodation in the list.
+
+![Write a Review for the Accommodation](https://github.com/hamse47/Student-Accomm-review/assets/78507974/e77d70d6-e13f-4da2-a9c0-71ad0a4f7647)
+
 
 ## Roadmap 🛤️
 
