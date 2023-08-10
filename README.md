@@ -60,8 +60,6 @@ Open your browser and visit http://localhost:3000 to use the app.
 
 ## Project Screenshots 📸
 
-## Project Screenshots
-
 # How to Use the Review App 📝
 
 Follow these steps to effectively navigate and utilize the Student-Accomm-Review app:
@@ -114,7 +112,12 @@ Click the "Write a Review" for the accommodation in the list.
 
 ## Roadmap 🛤️
 
-Visualize the future! Share your exciting plans and upcoming features that you intend to bring to the project.
+As I look ahead, I'm excited to expand this application further and enhance its capabilities. This project has been more than just a development endeavor; it has been a journey of learning and growth in the realm of React framework. My goal is to refine the user experience, introduce new features like user accounts and notifications, and continue optimizing the performance.
+
+This project has served as a valuable learning experience, allowing me to deepen my understanding of React's intricacies and best practices. Through this endeavor, I've not only developed a functional application but also acquired essential skills that will undoubtedly contribute to my expertise in web development.
+
+Contributions and suggestions are always welcome as I strive to make this project a testament to continuous improvement and innovation.
+
 
 ## Contributing 🤝
 
