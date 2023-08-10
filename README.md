@@ -26,7 +26,7 @@ Welcome to **Student-Accomm-Review**, a dynamic React web application designed t
 
 Before diving in, ensure you've got these essentials ready:
 - **Node.js:** Install it from [nodejs.org](https://nodejs.org/).
-- **MongoDB:** Get it up and running from [mongodb.com](https://www.mongodb.com/).
+- **MongoDB:** Get it up and running from [mongodb.com](https://www.mongodb.com/)
 
 ## Installation and Usage 🚀
 
